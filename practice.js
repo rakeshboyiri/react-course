@@ -15,3 +15,4 @@ var sort = (arr,n) =>{
 }
 sort(arr,arr.length);
 console.log(arr);
+console.log(arr);
