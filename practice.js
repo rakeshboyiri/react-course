@@ -1,11 +1,17 @@
+var arr = [40,20,50,10,30]
+var sort = (arr,n) =>{
+    if (n==1){
+        return ;
+    }
 
-x = 100;
-
-//we can call any function in js before decleration
-console.log(square(5));
-
-function square(n){
-    return n*n;
+    for(var i = 0;i<n-2;i++){
+        if(arr[i]>arr[i+1]){
+            var temp = arr[i];
+            arr[i] = arr[i+1];
+            arr[i+1] = temp;
+        }
+    }
+    sort(arr,n-1);
 }
-
-console.log(square(5));
+sort(arr,arr.length);
+console.log(arr);
