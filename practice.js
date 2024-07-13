@@ -1,17 +1,19 @@
-var arr = [40,20,50,10,30]
-var sort = (arr,n) =>{
-    if (n==1){
-        return ;
-    }
+const sort = (a, len) => {
+    if(len <= 1) return a;
+    let mid = Math.floor(len / 2);
+    let left = a.slice(0, mid);
+    let right = a.slice(mid, len);
+    return merge(sort(left, mid), sort(right, len - mid));
+}
 
-    for(var i = 0;i<n-2;i++){
-        if(arr[i]>arr[i+1]){
-            var temp = arr[i];
-            arr[i] = arr[i+1];
-            arr[i+1] = temp;
+const merge = (left, right) => {
+    let result = [];
+    while(left.length && right.length) {
+        if(left[0] < right[0]) {
+            result.push(left.shift());
+        } else {
+            result.push(right.shift());
         }
     }
-    sort(arr,n-1);
+    return result.concat(left, right);
 }
-sort(arr,arr.length);
-console.log(arr);
