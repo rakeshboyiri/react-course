@@ -1,19 +1,14 @@
-const sort = (a, len) => {
-    if(len <= 1) return a;
-    let mid = Math.floor(len / 2);
-    let left = a.slice(0, mid);
-    let right = a.slice(mid, len);
-    return merge(sort(left, mid), sort(right, len - mid));
-}
+const arr = [40,30,50,70,10]
 
-const merge = (left, right) => {
-    let result = [];
-    while(left.length && right.length) {
-        if(left[0] < right[0]) {
-            result.push(left.shift());
-        } else {
-            result.push(right.shift());
+for(var i = 0 ; i < arr.length ; i++){
+    for  (var j=0;j<arr.length-i-1;j++){
+        if(arr[j]>arr[j+1]){
+            var temp = arr[j]
+            arr[j] = arr[j+1]
+            arr[j+1] = temp
         }
     }
-    return result.concat(left, right);
 }
+console.log(arr)
+y = 10,20;
+console.log(y);
