@@ -8,3 +8,4 @@ var a = 100;
     console.log(c);
 }
 console.log(a);
+console.log(b);
