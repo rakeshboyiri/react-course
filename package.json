@@ -1,0 +1,22 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "First React App",
+  "main": "App.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rakeshboyiri/react-course.git"
+  },
+  "author": "rakesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rakeshboyiri/react-course/issues"
+  },
+  "homepage": "https://github.com/rakeshboyiri/react-course#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
