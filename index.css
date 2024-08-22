@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-#heading{
-    color: red;
-}
+
 
 #para{
     width: 100%;
@@ -17,4 +15,7 @@
 body{
     margin: 0px;
     padding: 0px;
+}
+.head{
+    color: red;
 }
